@@ -1,11 +1,9 @@
 import { useState } from "react";
 
 import logo from "../../../assets/images/logo.svg";
-import listIcon from "../../../assets/images/list-icon.svg";
 
 import Dropdown from "../../ui/atoms/Dropdown/Dropdown";
-
-import ChevronDownIcon from "../../icons/Chevron/Chevron";
+import Button from "../../ui/atoms/Button/Button";
 
 interface HeaderMenuShowDropdownItems {
   who: boolean;
@@ -38,6 +36,7 @@ const dropdownContent = {
         icon: false,
       },
     ],
+    align: "left",
   },
   create: {
     title: "Crear",
@@ -66,6 +65,7 @@ const dropdownContent = {
         icon: false,
       },
     ],
+    align: "left",
   },
   language: {
     title: "ES",
@@ -91,6 +91,7 @@ const dropdownContent = {
         icon: false,
       },
     ],
+    align: "right",
   },
 };
 
@@ -125,6 +126,7 @@ const MainHeader = () => {
                 <Dropdown
                   title={dropdownContent.who.title}
                   items={dropdownContent.who.items}
+                  align={dropdownContent.who.align}
                   showContent={showDropdownContent.who}
                   handleTitleClick={() => handleClickMenuItem("who")}
                 />
@@ -134,6 +136,7 @@ const MainHeader = () => {
                 <Dropdown
                   title={dropdownContent.create.title}
                   items={dropdownContent.create.items}
+                  align={dropdownContent.create.align}
                   showContent={showDropdownContent.create}
                   handleTitleClick={() => handleClickMenuItem("create")}
                 />
@@ -145,12 +148,13 @@ const MainHeader = () => {
           </nav>
         </div>
         <div className="right-menu">
-          <button className="btn btn-secondary">Acceder</button>
-          <button className="btn btn-primary">Regístrate</button>
+          <Button variant="secondary">Acceder</Button>
+          <Button variant="primary">Regístrate</Button>
 
           <Dropdown
             title={dropdownContent.language.title}
             items={dropdownContent.language.items}
+            align={dropdownContent.language.align}
             showContent={showDropdownContent.language}
             handleTitleClick={() => handleClickMenuItem("language")}
           />
