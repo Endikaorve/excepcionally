@@ -48,5 +48,17 @@ const Button: any = styled.button`
         border-color: rgb(105, 107, 116);
       }
     `}
+
+${(props: any) =>
+    props.size === "lg" &&
+    css`
+      padding: 1rem 1.5rem;
+
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: none;
+
+      border-radius: 0.5rem;
+    `}
 `;
 export default Button;

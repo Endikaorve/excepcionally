@@ -57,6 +57,7 @@ const Content: any = styled.div`
   top: 0;
   margin-top: 2rem;
 
+  display: none;
   flex-direction: column;
 
   padding: 0.5rem;
@@ -73,6 +74,7 @@ const Content: any = styled.div`
   ${(props: any) =>
     props.isShown &&
     css`
+      display: flex;
       opacity: 1;
       top: 0;
       z-index: 1;
