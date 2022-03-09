@@ -208,6 +208,13 @@ const BeforeDivider = styled.div`
   justify-content: space-between;
 
   font-size: 12px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
 `;
 
 const BeforeDividerLangs = styled.div``;
@@ -227,6 +234,13 @@ const AfterDivider = styled.div`
   justify-content: space-between;
 
   font-size: 12px;
+
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
 `;
 
 const AfterDividerCopyright = styled.div``;
